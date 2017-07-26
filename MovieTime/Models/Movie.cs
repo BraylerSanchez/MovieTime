@@ -37,7 +37,7 @@ namespace MovieTime.Models
         public string Writers { get; set; }
 
         [Required]
-        public List<byte> Photos { get; set; }
+        public List<byte[]> Photos { get; set; }
         
         public List<string> Videos { get; set; }
 

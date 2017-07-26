@@ -29,7 +29,7 @@ namespace MovieTime.Models
         public string Id { get; set; }
 
         [Required]
-        public DateTime Birth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         [Required]
         public string  City { get; set; }
