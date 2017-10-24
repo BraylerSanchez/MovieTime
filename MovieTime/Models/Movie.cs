@@ -15,6 +15,7 @@ namespace MovieTime.Models
         public string Title { get; set; }
 
         [Required]
+        [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
         [Required]
@@ -42,9 +43,11 @@ namespace MovieTime.Models
         public List<string> Videos { get; set; }
 
         [Required]
+        [Display(Name = "Number in stock")]
         public int NumberInStock { get; set; }
 
         [Required]
+        [Display(Name = "Available number")]
         public int NumberAvailable { get; set; }
 
         public double? Price { get; set; }
