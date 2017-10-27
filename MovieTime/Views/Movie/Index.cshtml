@@ -1,0 +1,100 @@
+﻿@model List<MovieTime.Models.Movie>
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<table style="width:100%">
+    <tr>
+        <td>
+            <h2>All movies</h2>
+        </td>
+        <td style="text-align:right">
+            Filter by:
+        </td>
+        <td style="text-align:right">
+            @Html.DropDownList("Año", new SelectListItem[] {
+                                      new SelectListItem { Text = "2017", Value = "2017" },
+                                      new SelectListItem { Text = "2017", Value = "2016" },
+                                      new SelectListItem { Text = "2017", Value = "2015" },
+                                      new SelectListItem { Text = "2017", Value = "2014" },
+                                      new SelectListItem { Text = "2017", Value = "2013" }
+            }, new { @class = "form-control" })
+        </td>
+        <td style="text-align:right">
+            @Html.DropDownList("Genero", new SelectListItem[] {
+                                      new SelectListItem { Text = "Accion", Value = "Accion" },
+                                      new SelectListItem { Text = "Romance", Value = "Romance" },
+                                      new SelectListItem { Text = "Terror", Value = "Terror" },
+                                      new SelectListItem { Text = "Suspenso", Value = "Suspenso" },
+                                      new SelectListItem { Text = "Thriller", Value = "Thriller" }
+            }, new { @class = "form-control" })
+        </td>
+        <td style="text-align:right; width:112px; height; 34px;">
+            <button type="button" class="btn btn-primary">Search movie</button>
+        </td>
+    </tr>
+</table>
+
+@if (Model.Count == 0)
+{
+    <div class="container text-center" style="width:100%; padding:30px;">
+        <div class="alert alert-info" style="width:340px; height:50px; margin: 0 auto;">
+            <h4 class="text-center">There are no movies.</h4>
+        </div>
+        <div class="well text-center" style="width:340px; height:250px; margin: 0 auto;">
+            <img style="width:200px; height:200px;" src="~/Resources/Images/movie.png" alt="Movie"/>
+        </div>        
+    </div>    
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body table-responsive">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img class="imgDimention img-thumbnail" src="~/Resources/Images/default.png" alt="@movie.Title" />
+                                </td>
+                                <td>
+                                    <h4 style="font-family: 'Bowlby One SC', cursive;">@movie.Title</h4>
+                                    <span><span class="label label-default">@movie.ReleaseDate.Year</span></span>
+                                    <span class="label label-default">@movie.Duration.Minute min</span>
+
+                                    @foreach (var gender in movie.Gender)
+                                    {
+                                        <span class="label label-primary">@gender.Name</span>
+                                    }
+
+                                    <h5><strong class="text-primary">IDMB: </strong>@movie.RankingIDMB</h5>
+
+                                    <h5><strong class="text-primary">Category: </strong>@movie.Category</h5>
+                                    <h5><strong class="text-primary">Description: </strong></h5>
+                                    <p class="text-muted limitText" style="text-align:justify">
+                                        @movie.Description
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="pull-right">Ver mas ></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<div class="text-right">
+    <ul class="pagination">
+        @for (int i = 1; i <= 50; i++)
+        {
+            <li><a href="#">@i</a></li>
+        }
+    </ul>
+</div>
+
+

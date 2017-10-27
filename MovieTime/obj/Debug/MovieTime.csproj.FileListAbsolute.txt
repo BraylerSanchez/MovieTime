@@ -51,3 +51,4 @@ c:\users\brayler\documents\visual studio 2015\Projects\MovieTime\MovieTime\obj\D
 c:\users\brayler\documents\visual studio 2015\Projects\MovieTime\MovieTime\obj\Debug\MovieTime.Migrations.CreatingDatabase.resources
 c:\users\brayler\documents\visual studio 2015\Projects\MovieTime\MovieTime\obj\Debug\MovieTime.csproj.GenerateResource.Cache
 c:\users\brayler\documents\visual studio 2015\Projects\MovieTime\MovieTime\obj\Debug\MovieTime.Migrations.AddRoleandusermodel.resources
+C:\Users\Brayler\documents\visual studio 2015\Projects\MovieTime\MovieTime\obj\Debug\MovieTime.Migrations.FixModels.resources

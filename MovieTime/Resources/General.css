@@ -1,0 +1,11 @@
+﻿.imgDimention{
+    width: 580px;
+    height: 220px;
+}
+
+.limitText {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
