@@ -16,10 +16,12 @@ namespace MovieTime.Models
 
         [Required]
         [StringLength(20)]
+        [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
         [Required]
         [StringLength(20)]
+        [Display(Name = "Second Last Name")]
         public string SecondLastName { get; set; }
 
         [Required]
@@ -29,6 +31,7 @@ namespace MovieTime.Models
         public string Id { get; set; }
 
         [Required]
+        [Display(Name = "Birthday")]
         public DateTime? DateOfBirth { get; set; }
 
         [Required]
