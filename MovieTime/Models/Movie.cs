@@ -33,6 +33,7 @@ namespace MovieTime.Models
         public string Description { get; set; }
 
         public double RankingIDMB { get; set; }
+        public double RankingRottenTomatoes { get; set; }
         public string Directors { get; set; }
         public string Writers { get; set; }
 
