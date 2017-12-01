@@ -1,0 +1,158 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<HTML>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/General.css" rel="stylesheet" type="text/css" />
+    <script src="~/Resources/General.js"></script> 
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>    
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js" type="text/javascript" ></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body style="background-color:darkgray">
+    <div class="login row">
+        @* Div Login*@
+        <div class="col-md-6 col-sm-12" id="formLogin">            
+            <h2><strong>Login</strong></h2>
+            <h5>Don't have an account? <a onclick="showRegister()">Create your account</a>, it takes less than a minute</h5>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password">
+                </div>   
+                
+                <div class="row">                    
+                    <div class="form-group col-md-7 col-sm-7 col-xs-7">
+                        <label><input type="checkbox" value=""> Remember me</label>
+                    </div>
+                    <div class="form-group col-md-5 col-sm-5 col-xs-5">
+                        <div class="pull-right">
+                            <a data-toggle="modal" data-target="#myModal" class="pull-right">Forgot Password?</a>
+                        </div>                        
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary btn-round-login" >
+                        <strong>LOGIN</strong>
+                    </button>                    
+                </div>               
+                <hr />
+                <div class="row">
+                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                        <label class="control-label">Or login with: </label>
+                    </div>
+                    <div class="form-group col-md-8 col-sm-8 col-xs-8">
+                        <button class="btn btn-primary btn-round" style="background-color: #08599e !important;">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-danger btn-round">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                </div>                 
+            </form>            
+        </div>  
+
+        @* Div Register*@
+        <div class="col-md-6 col-sm-12" id="formRegister" hidden>                        
+            <div class="row">                
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h2 class="pull-left" style="align-items:center"><strong>Register</strong></h2>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <span class="pull-right close-icon" onclick="showLogin()" >
+                        <i class="fa fa-window-close" aria-hidden="true" style="color:#cc0000; font-size:x-large"></i>
+                    </span>
+                </div>
+            </div>
+            <h5>Please, fill all the fields</h5>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm">Confirm password:</label>
+                    <input type="password" class="form-control" id="confirm">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-round-login">
+                        <strong>REGISTER</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        @* Div Welcome*@
+        <div class="col-md-6 col-sm-6 box-container">
+            <div class="box-message">
+                <h2 class="text-in-image"><strong>Welcome</strong></h2>
+                <hr class="message-line"/>
+                <h4>Login and enjoy the best movies online!</h4>
+            </div>            
+            <div class="box-image">
+                <img width="375" height="415" src="~/Resources/Images/laptop.jpg" />
+            </div>
+        </div>         
+    </div>
+
+    @* Div-Modal Forgot Password?*@
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <h4 class="modal-title">Forgot Password</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group" id="formEmail">
+                            <label for="email">Please enter your email address:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group" id="formConfirmation" hidden>
+                            <div class="text-center">
+                                <div id="divAnimation" style="width:150px; height:150px" class="img-align">
+
+                                </div>                                
+                                <label>
+                                    A link was sent to the email brayler_sanchez19@hotmail.com to help you recover your password.
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnSend" type="button" class="btn btn-primary" onclick="showConfirmation()">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="showRequest()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</HTML>
+
+
+
+

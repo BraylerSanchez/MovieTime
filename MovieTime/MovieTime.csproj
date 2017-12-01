@@ -134,6 +134,7 @@
     <Content Include="Resources\General.js" />
     <Content Include="Resources\Images\default.png" />
     <Content Include="Resources\Images\movie.png" />
+    <Content Include="Resources\Tab.css" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -141,12 +142,18 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +169,10 @@
     <Compile Include="Migrations\201707301941397_Fix Models.cs" />
     <Compile Include="Migrations\201707301941397_Fix Models.Designer.cs">
       <DependentUpon>201707301941397_Fix Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711031825332_AddTomatoesProperty.cs" />
+    <Compile Include="Migrations\201711031825332_AddTomatoesProperty.Designer.cs">
+      <DependentUpon>201711031825332_AddTomatoesProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -189,6 +200,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\MovieDetail.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Settings.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707301941397_Fix Models.resx">
       <DependentUpon>201707301941397_Fix Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711031825332_AddTomatoesProperty.resx">
+      <DependentUpon>201711031825332_AddTomatoesProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

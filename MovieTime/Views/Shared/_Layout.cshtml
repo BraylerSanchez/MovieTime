@@ -7,17 +7,23 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Resources/General.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Tab.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />    
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" id="header">
         <div class="container">
             <div class="navbar-header">                
-                @Html.ActionLink("MOVIE-TIME", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "font-family: 'Bowlby One SC', cursive;" })
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand"><strong style="font-family: 'Bowlby One SC', cursive;">MOVIE</strong>TIME</a>
+                @*@Html.ActionLink("MOVIE-TIME", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "font-family: 'Bowlby One SC', cursive;" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">                    
+                    <li>
+                        <a href="@Url.Action("Index", "Home")" class="">Home</a>
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Movies
@@ -30,25 +36,49 @@
                             <li><a href="#">Movies 2014</a></li>
                             <li><a href="#">Movies 2013</a></li>
                         </ul>
-                    </li>
+                    </li>                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>                    
+                    <li><a href="#"><span class="fa fa-user"></span> Sign Up</a></li>
+                    <li><a href="@Url.Action("Index", "Account")"><span class="fa fa-sign-in"></span> Login</a></li>                    
                 </ul>
             </div>
         </div>
     </div>
+    <div class="" id="container">
+        @RenderBody()      
+        <footer id="footer">
+            <div style="background-color:#101010">
+                <div class="container">
+                    <div class="row col-md-12">
+                        
+                        <div class="col-md-4 col-sm-4 col-xs-12" style="padding-top:25px;" id="div-link">
+                            <a href="#" class="link-aspect">About</a>
+                            <a href="#" class="link-aspect">Terms of service</a>
+                            <a href="#" class="link-aspect">Contact</a>
+                        </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - MovieTime</p>
+                        <div class="col-md-4 col-sm-4 col-xs-12" id="div-text">
+                            <h3 class="text-center" style="color:white;"><strong style="font-family: 'Bowlby One SC', cursive;">MOVIE</strong>TIME</h3>
+                            <h6 class="text-center" style="color:white;">Copyright &copy; @DateTime.Now.Year <strong>MOVIE</strong>TIME. All Rights Reserverd</h6>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12" style="padding-top:25px; padding-bottom:10px;" id="div-social">
+                            <a href="" class="icon-aspect"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="icon-aspect"><i class="fa fa-google-plus"></i></a>
+                            <a href="" class="icon-aspect"><i class="fa fa-instagram"></i></a>
+                            <a href="" class="icon-aspect"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
-    </div>
+    </div>   
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.0/jquery.nicescroll.min.js"></script>
+    <script src="https://areaaperta.com/nicescroll/js/jquery.nicescroll.plus.js"></script>
+    <script src="~/Resources/General.js"></script>
 </body>
 </html>

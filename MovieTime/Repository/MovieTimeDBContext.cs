@@ -9,7 +9,7 @@ namespace MovieTime.Repository
 {
     public class MovieTimeDBContext : DbContext
     {
-        public MovieTimeDBContext(): base("name=MovieTimeDBConnectionString")
+        public MovieTimeDBContext(): base("name=DefaultConnection")
         {
 
         }

@@ -1,0 +1,58 @@
+﻿@*@model MovieTime.Models.Movie*@
+
+@{
+    ViewBag.Title = "MovieDetail";
+}
+
+<div class="container" id="body">
+    <h1 class="font-title"><strong>Iron Man 2</strong></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4" style="padding-right:0 !important;">
+                <img width="400px" height="400px" class="img-thumbnail img-responsive" id="image-row" src="~/Resources/Images/default.png" alt="Titulo" />
+            </div>
+            <div class="col-md-5 col-sm-5">
+                <span><span class="label label-default">2015</span></span>
+                <span class="label label-default">150 Minutos</span>
+                <span class="label label-primary">Accion</span>
+                <span class="label label-primary">Comedia</span>
+
+                <h5><strong class="text-primary">IDMB: </strong>8.5</h5>
+                <h5><strong class="text-primary">Rotten Tomatoes: </strong>96%</h5>
+
+                <h5><strong class="text-primary">Category: </strong>+18</h5>
+                <h5><strong class="text-primary">Description: </strong></h5>
+                <p class="text-muted limitText" style="text-align:justify">
+                    Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este
+                </p>
+                <h5><strong class="text-primary">Other images:</strong></h5>
+                <div class="row">
+                    @* TODO foreach *@
+                    <div class="col-md-4 col-sm-4">
+                        <img width="140px" class="img-thumbnail img-responsive" id="image-row" height="140px" src="~/Resources/Images/default.png" />
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <img width="140px" class="img-thumbnail img-responsive" id="image-row" height="140px" src="~/Resources/Images/default.png" />
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <img width="140px" class="img-thumbnail img-responsive" id="image-row" height="140px" src="~/Resources/Images/default.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div>
+                    <h3 class=""><strong>Trailer</strong></h3>
+                    <div class="embed-container">
+                        <iframe width="255" height="120" src="https://www.youtube.com/embed/a12lo2RV530" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h3 class=""><strong>Actions</strong></h3>
+                    <button class="btn btn-primary">
+                        <strong>Watch Movie </strong> <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
