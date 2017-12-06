@@ -203,6 +203,7 @@
     <Content Include="Views\Movie\MovieDetail.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Settings.cshtml" />
+    <Content Include="Views\Movie\WatchMovie.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
