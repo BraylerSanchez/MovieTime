@@ -34,8 +34,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,                    
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,
@@ -52,8 +51,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,
@@ -71,8 +69,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,
@@ -114,8 +111,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,
@@ -132,8 +128,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,
@@ -151,8 +146,7 @@ namespace MovieTime.Controllers
                 {
                     MovieId = 1,
                     NumberAvailable = 10,
-                    NumberInStock = 10,
-                    Price = 150,
+                    NumberInStock = 10,                    
                     Title = "Test1",
                     Description = "Dirigida por Joseph Ruben, el filme cuenta los años de la Primera Guerra Mundial a través del punto de vista de una enfermera estadounidense en las provincias de Anatolia del Este",
                     ReleaseDate = DateTime.Now,

@@ -34,20 +34,22 @@ namespace MovieTime.Models
 
         public double RankingIDMB { get; set; }
         public double RankingRottenTomatoes { get; set; }
+        [Required]
         public string Directors { get; set; }
+        [Required]
         public string Writers { get; set; }
 
         [Required]
         public List<Photo> Photos { get; set; }
-        
+        [Required]
         public List<Video> Videos { get; set; }
 
         [Required]
         public int NumberInStock { get; set; }
 
         [Required]
-        public int NumberAvailable { get; set; }
+        public int NumberAvailable { get; set; }        
 
-        public double? Price { get; set; }
+        public int Viewwers { get; set; }
     }
 }

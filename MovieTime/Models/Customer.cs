@@ -60,5 +60,7 @@ namespace MovieTime.Models
 
         public Membership Membership { get; set; }
         public List<Movie> Movies { get; set; }
+
+        public int MyProperty { get; set; }
     }
 }

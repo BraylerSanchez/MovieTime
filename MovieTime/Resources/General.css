@@ -225,8 +225,16 @@ p.description-format {
     display:none;
 }
 
+.a-tab:hover{
+    color: #555 !important; 
+}
+
 a:hover{
     color: #bf040c !important; 
+}
+
+.a-tab:hover{
+    color: #555 !important; 
 }
 
 
